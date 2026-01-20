@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+.Python
+build/
+develop-eggs/
+dist/
+wheels/
+*.egg-info/
+*.egg
+
+# Virtual environment
+.env.production
+.env.local
+.env
+venv/
+virtualenv/
+
+
+# IDE
+.vscode/
+.idea/
+.history/
+.history/*
+
+# OS
+.DS_Store
+Thumbs.db
+
+### VS Code ###
+.vscode/
+
+### tests
+.pytest_cache/
+
+
+# Logs and temporary files
+*.log
+*.tmp
+/log/
+temp/
+sent_log.json
+
+# Database files
+# For local development, configuration, and migration history
+# You should version control your migration scripts, but not the generated database
+# or history files.
+
+
+# Docker and other tools
+# Ignore local Docker configuration files or build caches.
+.dockerignore
+.docker-compose.yaml
+.docker/
+.docker/data/
+*.db
+*.dat
+*.gz
+*.zip
