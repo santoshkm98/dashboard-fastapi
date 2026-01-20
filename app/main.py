@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.init.database import client
+from app.routes.dashboard import router as dashboard
+from app.routes import audit_report
 
 app = FastAPI(title="Trustcenter API")
 
@@ -31,3 +33,5 @@ async def startup_db_check():
 @app.get("/")
 async def root():
     return {"status": "Trustcenter API is running"}
+app.include_router(dashboard)
+app.include_router(audit_report.router, prefix="/api/audit-report", tags=["Audit Report"])
